@@ -26,7 +26,7 @@ The code is written using the following custom libraries:
 * [MCCI LoRaWAN LMIC library](https://github.com/mcci-catena/arduino-lmic): for the code has been taken inspiration from the **ttn-otaa** example.
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus): used to read GPS latitude and longitude from the NEO GPS module.
 * [Adafruit BME280 Library](https://github.com/adafruit/Adafruit_BME280_Library): used to read temperature, humidity, pressure and altitude from the BME280 sensor.
-* [MQSensorLib](https://github.com/miguel5612/MQSensorsLib): used to read CO2 concentration in PPM in the air.
+* [MQSensorLib](https://github.com/miguel5612/MQSensorsLib): used to read CO2 concentration in PPM.
 
 ## Auhtors
 
