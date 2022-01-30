@@ -1,6 +1,6 @@
 # Laboratorio di Segnali e Misure
 
-This project aims to study the basics of LoRa and LoRaWAN technology using an Arduino Uno and a bunch of other sensors. The code has been written in Wiring using the Arduino environment and basic libs like LMIC and TinyGPSPlus. Everything is better explained down here.
+This project aims to study the basics of LoRa and LoRaWAN technology using an Arduino Uno and a bunch of other sensors. The code has been written in Wiring using the Arduino environment and basic libs like LMIC and TinyGPSPlus.
 
 ## Table of Contents
 * [General info](#general-info)
