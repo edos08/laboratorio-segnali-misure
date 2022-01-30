@@ -28,7 +28,7 @@ The code is written using the following custom libraries:
 * [Adafruit BME280 Library](https://github.com/adafruit/Adafruit_BME280_Library): used to read temperature, humidity, pressure and altitude from the BME280 sensor.
 * [MQSensorLib](https://github.com/miguel5612/MQSensorsLib): used to read CO2 concentration in PPM.
 
-## Auhtors
+## Authors
 
 * **Leonardo Beltrame.**
 * **Francesco Rossetto.**
