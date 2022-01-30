@@ -6,6 +6,7 @@ This project aims to study the basics of LoRa and LoRaWAN technology using an Ar
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Code](#code)
+* [Authors](#authors)
 
 ## General Info
 
@@ -26,3 +27,9 @@ The code is written using the following custom libraries:
 * [TinyGPSPlus](https://github.com/mikalhart/TinyGPSPlus): used to read GPS latitude and longitude from the NEO GPS module.
 * [Adafruit BME280 Library](https://github.com/adafruit/Adafruit_BME280_Library): used to read temperature, humidity, pressure and altitude from the BME280 sensor.
 * [MQSensorLib](https://github.com/miguel5612/MQSensorsLib): used to read CO2 concentration in PPM in the air.
+
+## Auhtors
+
+* **Leonardo Beltrame.**
+* **Francesco Rossetto.**
+* **Edoardo Scarpel.**
