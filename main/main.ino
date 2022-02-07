@@ -42,11 +42,12 @@ const lmic_pinmap lmic_pins = {
 static uint8_t mydata[] = "Hello, world!";
 static osjob_t sendjob;
 
-unsigned long temperature = 0;
+long temperature = 0;
+long altitude = 0;
+long longitude = 0;
+long latitude = 0;
 unsigned long humidity = 0;
 unsigned long pressure = 0;
-unsigned long longitude = 0;
-unsigned long latitude = 0;
 unsigned long air_quality = 0;
 
 /*------OTHERS------*/
