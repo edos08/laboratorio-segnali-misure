@@ -1,17 +1,5 @@
-#include <Wire.h>
-
-#include <Adafruit_Sensor.h>
-
-#include <Adafruit_BME280.h>
-
-#define SEALEVELPRESSURE_HPA (1013.25)
-
-Adafruit_BME280 bme;
-
-unsigned long delayTime;
-
 void setupBME280() {
-  Serial.println(F("BME280 test"));
+  Serial.println(F("BME280 Setup"));
 
   bool status = bme.begin();  
   if (!status) {

@@ -13,7 +13,7 @@ void setupLoRaTTN() {
 }
 
 void runLoopLoRa() {
-    os_runloop_once();
+    
 }
 
 void printHex2(unsigned v) {
@@ -150,7 +150,7 @@ void do_send(osjob_t* j){
         Serial.println(F("OP_TXRXPEND, not sending"));
     } else {
         // Prepare upstream data transmission at the next possible time.
-        LMIC_setTxData2(1, mydata, sizeof(mydata)-1, 0);
+        LMIC_setTxData2(1, sensorData, sizeof(sensorData)-1, 0);
         Serial.println(F("Packet queued"));
     }
     // Next TX is scheduled after TX_COMPLETE event.
