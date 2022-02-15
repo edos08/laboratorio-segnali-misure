@@ -12,10 +12,6 @@ void setupLoRaTTN() {
     do_send(&sendjob);
 }
 
-void runLoopLoRa() {
-    
-}
-
 void printHex2(unsigned v) {
     v &= 0xff;
     if (v < 16)
