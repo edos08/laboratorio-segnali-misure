@@ -64,15 +64,13 @@ float pressure = 0;
 float altitude = 0;
 float latitude = 0;
 float longitude = 0;
-String air_quality = "NaN";
+String air_quality = "null";
 
 unsigned long dataPreviousMillis = 0;
 unsigned long dataTimeInterval = 60000;     // 10 mins
 unsigned long gpsListenTime = 5000;         // 5 sec
 unsigned long dataCollectionTime = 7000;    // 7 sec
 unsigned long retryTime = 30000;            // 30 sec
-
-bool booted = true;
 
 /*------OTHERS------*/
 
@@ -93,12 +91,14 @@ void setup() {
 void loop() {
   os_runloop_once();
   if ((millis() - dataPreviousMillis) > dataTimeInterval) {
-      if (!os_queryTimeCriticalJobs(ms2osticks(dataCollectionTime))) {
+    if (!os_queryTimeCriticalJobs(ms2osticks(dataCollectionTime))) {
+      Serial.println("\nRetrieving data");
       dataPreviousMillis = millis();
       while ((millis() - dataPreviousMillis) < gpsListenTime) {
         get_GPS_data(millis() + 500);
       }
-      booted = false;
+      Serial.println("Latitude: " + String(latitude, 4));
+      Serial.println("Longitude: " + String(longitude, 4));
       get_BME280_data();
       get_MQ135_data();
       buildData();
@@ -110,7 +110,7 @@ void loop() {
 
 void buildData() {
   String data = "||" + String(temperature, 2) + "|" + String(humidity, 0) + "|" + String(pressure, 0) + "|" + String(altitude, 0) + "|" + String(latitude, 4) + "|" + String(longitude, 4) + "|" + air_quality + "||";
-  Serial.println("Payload data: " + String(data));
+  Serial.println("Payload data: {" + String(data) + "}");
   Serial.println("Payload length: " + String(data.length()) + " byte");
 
   if (data.length() < 51) {
@@ -127,6 +127,7 @@ void buildData() {
   } else {
     Serial.println("Can't create payload: data too long.");
   }
+  Serial.println();
 }
 
 void initialData() {

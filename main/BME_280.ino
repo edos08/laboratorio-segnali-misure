@@ -9,25 +9,16 @@ void setupBME280() {
 }
 
 void get_BME280_data() {
-  Serial.print("Temperature = ");
   temperature = bme.readTemperature();
-  Serial.print(temperature);
-  Serial.println(" *C");
+  Serial.println("Temperature: " + String(temperature) + " °C");
   
-  Serial.print("Pressure = ");
   pressure = bme.readPressure() / 100.0F;
-  Serial.print(pressure);
-  Serial.println(" hPa");
+  Serial.println("Pressure: " + String(pressure) + " hPa");
   
-  Serial.print("Approx. Altitude = " );
   altitude = bme.readAltitude(SEALEVELPRESSURE_HPA);
-  Serial.print(altitude);
-  Serial.println(" m");
+  Serial.println("Altitude: " + String(altitude) + " m");
   
-  Serial.print("Humidity = ");
   humidity = bme.readHumidity();
-  Serial.print(humidity);
-  Serial.println(" %");
+  Serial.println("Humidity: " + String(humidity) + "%");
   
-  Serial.println();
 }

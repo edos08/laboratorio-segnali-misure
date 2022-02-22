@@ -11,10 +11,7 @@ void get_GPS_data(int stopTime) {
     if (gps.location.isValid()) {
       if (gps.location.isUpdated()) {
         latitude = gps.location.lat();
-        Serial.print(latitude, 6);
-        Serial.print(F(","));
         longitude = gps.location.lng();
-        Serial.println(longitude, 6);
       }
     }
   }

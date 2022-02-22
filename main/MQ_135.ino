@@ -12,4 +12,6 @@ void get_MQ135_data() {
   } else {
     air_quality = "Good";
   }
+
+  Serial.println("Air Quality: " + air_quality);
 }
