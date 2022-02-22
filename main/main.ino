@@ -72,8 +72,7 @@ unsigned long gpsListenTime = 5000;         // 5 sec
 unsigned long dataCollectionTime = 7000;    // 7 sec
 unsigned long retryTime = 30000;            // 30 sec
 
-/*------OTHERS------*/
-
+/*------MAIN CODE------*/
 
 void setup() {
   Serial.begin(9600);
@@ -84,7 +83,6 @@ void setup() {
   setupGPS();
   setupBME280();
   setupMQ135();
-  
   setupLoRaTTN();
 }
 

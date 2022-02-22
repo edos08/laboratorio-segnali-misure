@@ -20,5 +20,4 @@ void get_BME280_data() {
   
   humidity = bme.readHumidity();
   Serial.println("Humidity: " + String(humidity) + "%");
-  
 }
