@@ -30,7 +30,7 @@ The first main step to follow was to understand the technologies we were using. 
 
 ### Hardware and code assembling
 
-After we understand how all the hardware components work, we then assembled them all and started writing the final code:
+After we understood how all the hardware components work, we then assembled them all and started writing the final code:
 
 - BME280: the sensor uses an I2C connection to work: we studied that type of connection during the course. So we've connected the sensor to the `SDA` pin for data transfer, `SCL` pin to carry the clock signal, `VCC` and `GND` pins for the power supply (3.3V). For the code, we've used the official Adafruit library and we called the necessary methods, to record the sensor data, in the `get_BME280_data()` function.
 - GPS Module: the sensor uses a serial connection to communicate with the board, so the pins choice is arbitrary. One pin is used as the transmitter (TX) and the other as the receiver (RX), the other two are used as power supply (5V). The GPS module triangulates the geo-position after listening to satellites and transmits the resulting data through the TX pin, encoded as NMEA sentences. In the code, we've used the TinyGPS++ library to decode those sentences and extract latitude and longitude. All of this is done in the `get_GPS_data()` function.
